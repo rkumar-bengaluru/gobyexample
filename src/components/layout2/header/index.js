@@ -174,11 +174,11 @@ const Header2 = (props) => {
                         {showSideBar && renderNavigationBar()}
                         {/* Side Bar Navigation Ends Here */}
                         <a href="/">
-                            <img src='/icons/logo.svg' alt="LocalShop"></img>
+                            <img src='/gobyexample/icons/logo.svg' alt="LocalShop"></img>
                         </a>
                     </div>
                 </div>
-               
+                <div className="col-md-auto"><h2 class="text-white">Learn Go By Example</h2></div>
                 <div className="col-md-auto">
                     <a href="/blog/marketplace.html" target="_blank">
                         <img src='/gobyexample/icons/mp.svg' alt="LocalShop"></img>

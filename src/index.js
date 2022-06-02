@@ -9,7 +9,7 @@ ReactDOM.render(
   <BrowserRouter>
     <AppLayout2>
       <Switch>
-        <Route exact path="/" component={App2} />
+        <Route exact path="/gobyexample/" component={App2} />
       </Switch>
     </AppLayout2>
   </BrowserRouter>
