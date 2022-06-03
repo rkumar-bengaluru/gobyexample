@@ -1,0 +1,14 @@
+{
+  "catalogListUrl": "/api/v1/catalog/list",
+  "catalogListHasMore": "/api/v1/catalog/hasMorePages",
+  "catalogSearchUrl": "/api/v1/catalog/search",
+  "catalogSearchHasMore": "/api/v1/catalog/searchHasMorePages",
+  "getDestLocUrl": "/api/v1/util/getDestLoc",
+  "getDistanceUrl": "/api/v1/util/getDistance",
+  "productUrl" : "/api/v1/catalog/product",
+  "orderUrl" : "/api/v1/order/createOrder",
+  "categoryUrl" : "/api/v1/category/",
+  "amazonUrl" : "https://www.amazon.in/gp/product/",
+  "flipkartUrl": "https://www.flipkart.com/product/p/",
+  "contactNo" : "+91 9113584362"
+}

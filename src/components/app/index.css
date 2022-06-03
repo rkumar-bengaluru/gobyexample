@@ -1,0 +1,23 @@
+.content {
+ display: flex;
+ flex-direction: column;
+}
+
+.content > div {
+	padding: 5px;
+}
+
+.carousel-slider {
+	width:100%;
+	border: 1px solid grey;
+	background-color: white;
+}
+
+.products {
+  width: 100%;
+  display: flex;  
+  flex-direction: row;
+  border: 2px solid white;
+  background-color: white;
+}
+
