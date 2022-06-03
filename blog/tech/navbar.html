@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Responsive Site Navigation (Rupak Kumar)</title>
+    <meta name="msvalidate.01" content="96532A822689DF439D571FF97AEB4EA8" />
+    <meta name="description" content="responsive nav bar design ">
+    <link rel="icon" href="/favicon-16x16.png" type="image/gif" sizes="16x16">
+    <meta name="theme-color" content="#000000">
+    <meta name="author" content="Rupak Kumar">
+
+    <!-- fb & Whatsapp -->
+    <!-- Site Name, Title, and Description to be displayed -->
+    <meta property="og:title" content="responsive nav bar design">
+    <meta property="og:description" content="responsive nav bar design">
+    <meta property="og:image" itemprop="image" content="/blog/img/rkumar.jpg">
+    <meta property="og:site_name" content="Your Virtual Local Shop...">
+    <meta property="og:url" content="www.vlocalshop.in" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="300">
+    <meta name="keywords" content="responsive, nav, bar, design">
+    <meta name="msapplication-TileImage" content="/blog/img/rkumar.jpg">
+
+    <link rel="stylesheet" href="/blog/css/techblog.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/w3-css/4.1.0/w3.css"
+        integrity="sha512-Ef5r/bdKQ7JAmVBbTgivSgg3RM+SLRjwU0cAgySwTSv4+jYcVeDukMp+9lZGWT78T4vCUxgT3g+E8t7uabwRuw=="
+        crossorigin="anonymous" />
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <style>
+        .sitenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: white;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sitenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #0e0505;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sitenav a:hover {
+            color: #ebd50f;
+        }
+
+        .sitenav .closebtn {
+            position: relative;
+            top: 0;
+            right: 25px;
+            font-size: 46px;
+            margin-left: 50px;
+        }
+
+
+        @media screen and (max-height: 450px) {
+            .sitenav {
+                padding-top: 15px;
+            }
+
+            .sitenav a {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <link itemprop="thumbnailUrl" href="/blog/img/rkumar.jpg">
+    <span itemprop="thumbnail" itemscope itemtype="http://schema.org/ImageObject">
+        <link itemprop="url" href="/blog/img/rkumar.jpg">
+    </span>
+
+    <div class="container">
+        <div id="sitenavigation" class="sitenav">
+            <!--Navbar -->
+            <button onClick="closeNav()" type="button" class="btn btn-primary m-2">
+                <i class="fas fa-times"></i>
+            </button>
+            <ul class="list-unstyled components">
+                <li class="active  list-group-item list-group-item-action list-group-item-primary">
+                    <a href="#badmintonsubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+
+                        <i><img src="/icons/badminton.svg" /> Badminton </i>
+                    </a>
+                    <ul class="collapse list-unstyled" id="badmintonsubMenu">
+                        <li class="list-group-item list-group-item-action list-group-item-primary">
+                            <a class="dropdown-item border-bottom text-primary" href="/category/badminton/racquet">
+                                <i><img src="/icons/racquet.svg" /> Racquet </i>
+                            </a>
+                        </li>
+                        <li class="list-group-item list-group-item-action list-group-item-primary">
+                            <a class="dropdown-item" href="/category/badminton/shuttle">
+                                <i><img src="/icons/shuttle.svg" /> Shuttle </i>
+                            </a>
+                        </li>
+                        <li class="list-group-item list-group-item-action list-group-item-primary">
+                            <a class="dropdown-item" href="/category/badminton/bags">
+                                <i><img src="/icons/bag.svg" /> Equipment
+                                    Bag </i>
+                            </a>
+                        </li>
+                        <li class="list-group-item list-group-item-action list-group-item-primary">
+                            <a class="dropdown-item" href="/category/badminton/cover">
+                                <i><img src="/icons/cover.svg" /> Racquet
+                                    Cover </i>
+                            </a>
+                        </li>
+                        <li class="list-group-item list-group-item-action list-group-item-primary">
+                            <a class="dropdown-item" href="/category/badminton/strings">
+                                <i><img src="/icons/string.svg" /> String </i>
+                            </a>
+                        </li>
+                        <li class="list-group-item list-group-item-action list-group-item-primary">
+                            <a class="dropdown-item" href="/category/badminton/grips">
+                                <i><img src="/icons/grips.svg" /> Grips </i>
+                            </a>
+                        </li>
+                        <li class="list-group-item list-group-item-action list-group-item-primary">
+                            <a class="dropdown-item" href="/category/badminton/set">
+                                <i><img src="/icons/set.svg" /> Complete
+                                    Set </i>
+                            </a>
+                        </li>
+                        <li class="list-group-item list-group-item-action list-group-item-primary">
+                            <a class="dropdown-item" href="/category/badminton/nets">
+                                <i><img src="/icons/nets.svg" /> Nets</i>
+                            </a>
+                        </li>
+                        <li class="active  list-group-item list-group-item-action list-group-item-primary">
+                            <i>
+                                <a href="#badmintonBrandSubMenu" data-toggle="collapse" aria-expanded="false"
+                                    class="dropdown-toggle">Badminton By Brand</a>
+                            </i>
+                            <ul class="collapse list-unstyled" id="badmintonBrandSubMenu">
+                                <li class="list-group-item list-group-item-action list-group-item-primary">
+                                    <a class="dropdown-item" href="/category/badminton/yonex"> <i><img
+                                                src="/icons/yonex.svg" /> Yonex</i></a>
+                                </li>
+                                <li class="list-group-item list-group-item-action list-group-item-primary">
+                                    <a class="dropdown-item" href="/category/badminton/apacs"> <i><img
+                                                src="/icons/apacs.svg" /> Apacs</i></a>
+                                </li>
+                                <li class="list-group-item list-group-item-action list-group-item-primary">
+                                    <a class="dropdown-item" href="/category/badminton/lining"> <i><img
+                                                src="/icons/lining.svg" /> Li-Ning</i></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="active  list-group-item list-group-item-action list-group-item-primary">
+                    <i><a href="#cricketMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i><img src="/icons/cricket.svg" /> Cricket</i>
+                        </a>
+                    </i>
+                    <ul class="collapse list-unstyled" id="cricketMenu">
+                        <li class="list-group-item list-group-item-action list-group-item-primary">
+                            <a class="dropdown-item" href="/category/cricket/sg"><i><img src="/icons/sg.svg" />
+                                    SG</i></a>
+                        </li>
+                        <li class="list-group-item list-group-item-action list-group-item-primary">
+                            <a class="dropdown-item" href="/category/cricket/sf"><i><img src="/icons/sf.svg" />
+                                    SF</i></a>
+                        </li>
+                        <li class="list-group-item list-group-item-action list-group-item-primary">
+                            <a class="dropdown-item" href="/category/cricket/mrf"><i><img src="/icons/mrf.svg" />
+                                    MRF</i></a>
+                        </li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <header class="blog-header py-3">
+            <div class="row flex-nowrap justify-content-between align-items-center">
+                <div class="col-2 pt-1">
+                    <a class="text-muted" href="/"><img src='/img/logo-144x60.jpg' class="img-fluid"
+                            alt="Responsive image"></a>
+                </div>
+                <div class="col-6 text-center">
+                    <a class="blog-header-logo text-dark">The Technology Blogs</a>
+                </div>
+                <div class="col-4 d-flex justify-content-end align-items-center">
+                    <a class="btn btn-sm btn-outline-secondary">
+                        <img style="width: 70px;" src='/blog/img/rkumar.jpg' class="img-fluid rounded-circle"
+                            alt="Responsive image">
+                    </a>
+                </div>
+            </div>
+        </header>
+        <main role="main" class="container">
+            <div class="row">
+                <div class="col-md-8 blog-main">
+                    <div class="blog-post">
+                        <h2 class="blog-post-title">Responsive Navigation Bar</h2>
+                        <p class="blog-post-meta">February 24, 2021 by <a href="/blog/techblogs.html">Rupak Kumar</a>
+                        </p>
+                        <!--Add Post Content-->
+                        <p>
+                            Before we start let's make sure you see the demo below if that is what
+                            technically you are looking for. There are thousands are web resources
+                            around this topic and they talk about one aspect or the other, the demo
+                            will help save your time, if this is not what you are looking then happy
+                            web sourcing otherwise continue reading. By the end of this blog you will be
+                            able to write your own responsive bar as below.
+                        </p>
+                        <div class="col-md-auto">
+                            <button type="button" class="btn btn-primary" onClick="openNav()">
+                                <i class="fa fa-bars"> Demo</i>
+                            </button>
+                        </div>
+                        <br>
+                        <p>
+                            Now that you are reading this means this is what you want. Word of
+                            caution - do not mix too many web frameworks in your site that just
+                            kills the whole purpose. With the ocean of frameworks around with so
+                            many over-lapping classes that you will end up debugging most of your
+                            time on why the look and feel do not matches with the defined description.
+                        </p>
+                        <p>
+                            To be very precise i have used
+                            <a href="https://getbootstrap.com/docs/4.6/getting-started/introduction/">bootstrap v
+                                4.6.0</a>
+                            for getting this responsive menu. Do not mix with other frameworks like
+                            <a href="https://materializecss.com/">materialize ui</a> etc. The minimal you need are
+                            below:-
+                        </p>
+                        <h3>CSS</h3>
+                        <div class="w3-panel w3-card w3-light-grey w3-code htmlHigh notranslate">
+                            &lt;link rel=&quot;stylesheet&quot;
+                            href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css&quot;
+                            integrity=&quot;sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l&quot;
+                            crossorigin=&quot;anonymous&quot;&gt;<br>
+                            &lt;link rel=&quot;stylesheet&quot;
+                            href=&quot;https://fonts.googleapis.com/css?family=Playfair+Display:700,900&quot;&gt;<br>
+                            &lt;link rel=&quot;stylesheet&quot;
+                            href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css&quot;
+                            integrity=&quot;sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==&quot;
+                            crossorigin=&quot;anonymous&quot; /&gt;<br>
+                        </div>
+                        <h3>JS</h3>
+                        <div class="w3-panel w3-card w3-light-grey w3-code htmlHigh notranslate">
+                            &lt;script src=&quot;https://code.jquery.com/jquery-3.2.1.slim.min.js&quot;
+                            integrity=&quot;sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN&quot;
+                            crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;<br>
+                            &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+                            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+                            crossorigin="anonymous"&gt;<br>&lt;/script&gt;<br>
+                        </div>
+                        <p>
+                            Now that we have imported the required libraries, let walkthrough the use 
+                            case as well. Assume that you are designing the menu for an online sports
+                            shop example badminton or cricket. There are various attributes of a 
+                            badminton, they are racquets, shuttle, string, grips etc. Along with that
+                            badminton has brands like yonex, li-ning, apacs to name the few. What we 
+                            are going to do is create menu bar for the same.
+                        </p>
+                        <h3>Create Menu</h3>
+                        <div class="w3-panel w3-card w3-light-grey w3-code htmlHigh notranslate">
+                            &lt;div&gt; class="container"&gt;<br>
+                            &emsp;&lt;div id="sitenavigation" class="sitenav"&gt;<br>
+                            &emsp;&emsp;&lt;ul class="list-unstyled components"&gt;<br>
+                            &emsp;&emsp;&emsp;&lt;li class="active  list-group-item "&gt;<br>
+                            &emsp;&emsp;&emsp;&emsp;&lt;a href="#badmintonsubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"&gt;<br>
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&lt;i>&lt;img src="/icons/badminton.svg" /&gt; Badminton &lt;/i&gt;<br>
+                            &emsp;&emsp;&emsp;&emsp;&lt;/a&gt;<br>
+                            &emsp;&emsp;&emsp;&lt;/li&gt;<br>   
+                            &emsp;&emsp;&emsp;&lt;li class="active  list-group-item "&gt;<br>
+                            &emsp;&emsp;&emsp;&emsp;&lt;a href="#cricketMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"&gt;<br>
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&lt;i>&lt;img src="/icons/cricket.svg" /&gt; Cricket &lt;/i&gt;<br>
+                            &emsp;&emsp;&emsp;&emsp;&lt;/a&gt;<br>
+                            &emsp;&emsp;&emsp;&lt;/li&gt;<br>   
+                            &emsp;&emsp;...more menu<br>                         
+                            &emsp;&emsp;&lt;/ul&gt;<br>
+                            &emsp;&lt;/div&gt;<br>                           
+                            &lt;/div&gt;                            
+                        </div>
+                        <p>Note that bootstrap classes are being used for decoration.</p>
+                        <h3>Create Sub Menu</h3>
+                        <div class="w3-panel w3-card w3-light-grey w3-code htmlHigh notranslate">
+                            &lt;ul class="collapse list-unstyled" id="badmintonsubMenu"&gt;<br>
+                            &emsp;&lt;li class="list-group-item list-group-item-action list-group-item-primary"&gt;<br>
+                            &emsp;&emsp;&lt;a class="dropdown-item border-bottom text-primary" href="#" &gt;<br>
+                            &emsp;&emsp;&emsp;&lt;i&gt;&lt;img src="/icons/racquet.svg"/&gt; Racquet&lt;/i&gt;<br>                            
+                            &emsp;&emsp;&lt;/a&gt;<br>   
+                            &emsp;&emsp;...more sub menus<br>
+                            &emsp;&lt;/li&gt;<br>                         
+                            &lt;/ul&gt;                            
+                        </div>
+                        <p>
+                            Note menu (#badmintonsubMenu ) and sub menus (id="badmintonsubMenu" 
+                            ) are linked.
+                        </p>
+                        <h3>Full Navigation Div</h3>
+                        <div class="w3-panel w3-card w3-light-grey w3-code htmlHigh notranslate">
+                            &lt;div&gt; class="container"&gt;<br>
+                            &emsp;&lt;div id="sitenavigation" class="sitenav"&gt;<br>
+                            &emsp;&emsp;&lt;ul class="list-unstyled components"&gt;<br>
+                            &emsp;&emsp;&emsp;&lt;li class="active  list-group-item "&gt;<br>
+                            &emsp;&emsp;&emsp;&emsp;&lt;a href="#badmintonsubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"&gt;<br>
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&lt;i>&lt;img src="/icons/badminton.svg" /&gt; Badminton &lt;/i&gt;<br>
+                            &emsp;&emsp;&emsp;&emsp;&lt;/a&gt;<br>
+
+                            &emsp;&emsp;&emsp;&emsp;&lt;ul class="collapse list-unstyled" id="badmintonsubMenu"&gt;<br>
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&lt;li class="list-group-item list-group-item-action list-group-item-primary"&gt;<br>
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&lt;a class="dropdown-item border-bottom text-primary" href="#" &gt;<br>
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&lt;i&gt;&lt;img src="/icons/racquet.svg"/&gt; Racquet&lt;/i&gt;<br>                            
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&lt;/a&gt;<br>   
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;...more sub menus<br>
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&lt;/li&gt;<br>                         
+                            &emsp;&emsp;&emsp;&emsp;&lt;/ul&gt;  
+
+                            &emsp;&emsp;&emsp;&lt;/li&gt;<br>   
+                            &emsp;&emsp;&emsp;&lt;li class="active  list-group-item "&gt;<br>
+                            &emsp;&emsp;&emsp;&emsp;&lt;a href="#cricketMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"&gt;<br>
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&lt;i>&lt;img src="/icons/cricket.svg" /&gt; Cricket &lt;/i&gt;<br>
+                            &emsp;&emsp;&emsp;&emsp;&lt;/a&gt;<br>
+                            &emsp;&emsp;&emsp;&lt;/li&gt;<br>   
+                            &emsp;&emsp;...more menu<br>                         
+                            &emsp;&emsp;&lt;/ul&gt;<br>
+                            &emsp;&lt;/div&gt;<br>                           
+                            &lt;/div&gt;                            
+                        </div>
+                        <h3>What Next??? Open Trigger </h3>
+                        <p>
+                            So far we have defined the div which has the navigation definition meaning
+                            what menus and submenus required for the project. When the page loads this 
+                            div width is set to 0.
+                        </p>
+                        <div class="w3-panel w3-card w3-light-grey w3-code htmlHigh notranslate">
+                            &lt;style&gt;<br>
+                            &emsp;.sitenav {<br>
+                                &emsp;&emsp;width: 0;<br>                                                        
+                            &emsp;}<br>                         
+                            &lt;/style&gt;                            
+                        </div>
+                        <p>
+                            Now let's code the trigger button which onClick will set some width to 
+                            sitenavigation div.
+                        </p>
+                        <div class="w3-panel w3-card w3-light-grey w3-code htmlHigh notranslate">
+                            &lt;div class="col-md-auto"&gt;<br> 
+                            &emsp;&lt;button type="button" class="btn btn-primary" onClick="openNav()"&gt;<br>
+                            &emsp;&emsp;&lt;i class="fa fa-bars"&gt; Demo&lt;/i&gt;<br>
+                            &emsp;&lt;/button&gt;<br>                                                      
+                           &lt;/div&gt;                            
+                        </div>
+                        <p>
+                            Check the above code, when the button is clicked a javascript function is called 
+                            which will set the width as below:
+                        </p>
+                        <div class="w3-panel w3-card w3-light-grey w3-code htmlHigh notranslate">
+                            &ltscript&gt;<br> 
+                            &emsp;function openNav() {<br>
+                            &emsp;&emsp; document.getElementById("sitenavigation").style.width = "400px";<br>
+                            &emsp;}<br>                                                      
+                           &lt;/script&gt;                            
+                        </div>
+                        <h3>Let's code Close Trigger </h3>
+                        <div class="w3-panel w3-card w3-light-grey w3-code htmlHigh notranslate">
+                            &ltscript&gt;<br> 
+                            &emsp;function closeNav() {<br>
+                            &emsp;&emsp; document.getElementById("sitenavigation").style.width = 0;<br>
+                            &emsp;}<br>                                                      
+                           &lt;/script&gt;                            
+                        </div>
+                        <h3>Finally Let's Have a close button. </h3>
+                        <p>
+                            The close trigger has to be part of the sitenavigation div only. Let's 
+                            add the close button on the sitenavigation div.
+                        </p>
+                        <div class="w3-panel w3-card w3-light-grey w3-code htmlHigh notranslate">
+                            &lt;div&gt; class="container"&gt;<br>
+                            &emsp;&lt;div id="sitenavigation" class="sitenav"&gt;<br>
+                            &emsp;&emsp;&lt;button onClick="closeNav()" type="button" class="btn btn-primary m-2"&gt;<br>
+                            &emsp;&emsp;&emsp;&lt;i class="fas fa-times"&gt;&lt;/i&gt;<br>
+                            &emsp;&emsp;&lt;button&gt;<br> 
+                            &emsp;&emsp;...menus and submenus follows<br> 
+                            &emsp;&lt;/div&gt;<br>                           
+                            &lt;/div&gt;                            
+                        </div>
+                        <h3>Download Source Code </h3>
+                        <a href="/blog/tech/navbar-src.html" download>
+                            <i class="fas fa-3x fa-download"></i>
+                        </a>
+                       
+                        <!-- Blog Post Content Ends...-->
+                    </div>
+                </div>
+                <aside class="col-md-4 blog-sidebar">
+                    <div class="p-3 mb-3 bg-light rounded">
+                        <h4 class="font-italic">About the Author</h4>
+                        <p class="mb-0">A creative technologist, thought leader and problem solver with 20+ years of
+                            experience as architect and developer in various application and infrastructure domains.</p>
+                    </div>
+
+                    <div class="p-3">
+                        <h4 class="font-italic">Archives</h4>
+                        <ol class="list-unstyled mb-0">
+                            <li><a href="#">2020</a></li>
+                            <li><a href="#">2019</a></li>
+                            <li><a href="#">2018</a></li>
+                        </ol>
+                    </div>
+
+                    <div class="p-3">
+                        <h4 class="font-italic">Follow On </h4>
+                        <ol class="list-unstyled">
+                            <li><a href="#">GitHub</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Facebook</a></li>
+                        </ol>
+                    </div>
+                </aside><!-- /.blog-sidebar -->
+
+            </div>
+        </main>
+
+
+        <div class="row justify-content-around border-bottom">
+            <footer>
+                <div class="row justify-content-center border-bottom m-5">
+                    <h3 style="color:  #0f0f0f;font: normal 36px 'Cookie', cursive;margin: 0;">
+                        Rupak<span style="color:  #e2c20b;">Kumar</span>
+                    </h3>
+                </div>
+                <div class="row justify-content-center border-bottom m-5">
+                    <div class="col">
+                        <div>
+                            <a href="https://www.facebook.com/vlocal.s/" target="_blank">
+                                <span style=" color: #3B5998;">
+                                    <i class="fab fa-3x fa-facebook-square"></i> &ThickSpace;&ThickSpace;
+                                </span>
+                            </a>
+                            <a href="https://twitter.com/vlocalshop" target="_blank">
+                                <span style=" color: #55ACEE">
+                                    <i class="fab fa-3x fa-twitter-square"></i> &ThickSpace;&ThickSpace;
+                                </span>
+                            </a>
+                            <a href="https://in.pinterest.com/vlocalshop/_saved/" target="_blank">
+                                <span style=" color: #cb2027;">
+                                    <i class="fab fa-3x fa-pinterest-square"></i> &ThickSpace;&ThickSpace;
+                                </span>
+                            </a>
+                            <a href="https://www.instagram.com/vlocalshop.in12/" target="_blank">
+                                <span style=" color: #125688;">
+                                    <i class="fab fa-3x fa-instagram-square"></i> &ThickSpace;
+                                </span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/vlocal-shop-707736205/" target="_blank">
+                                <span style=" color: #007bb5;">
+                                    <i class="fab fa-3x fa-linkedin-square"></i> &ThickSpace;&ThickSpace;
+                                </span>
+                            </a>
+                            <a href="https://www.youtube.com/channel/UCUonfa3DSprijW_xR9Xs16w" target="_blank">
+                                <span style=" color: #bb0000;">
+                                    <i class="fab fa-3x fa-youtube-square"></i> &ThickSpace;&ThickSpace;
+                                </span>
+                            </a>
+                            <a href="https://api.whatsapp.com/send/?phone=919113584362" target="_blank">
+                                <span style=" color: #0fec2d;">
+                                    <i class="fab fa-3x fa-whatsapp-square"></i> &ThickSpace;&ThickSpace;
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+        <script>
+            function openNav() {
+                document.getElementById("sitenavigation").style.width = "400px";
+            }
+
+            function closeNav() {
+                document.getElementById("sitenavigation").style.width = "0";
+            }
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.7/holder.min.js"></script>
+        <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+        <script>
+            w3CodeColor();
+        </script>
+</body>
+
+</html>
