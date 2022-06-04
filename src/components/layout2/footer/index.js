@@ -1,16 +1,6 @@
 import React, { } from 'react';
 const Footer2 = (props) => {
 
-    var socialMediaColors = {
-        "facebook": "#3B5998",
-        "twitter": "#55ACEE",
-        "pinterest": "#cb2027",
-        "instagram": "#125688",
-        "linkedin": "#007bb5",
-        "youtube": "#bb0000",
-        "whatsapp": "#0fec2d",
-    };
-
     var year = new Date();
     return (
         <div class="row justify-content-left border-bottom m-5">
@@ -18,10 +8,10 @@ const Footer2 = (props) => {
                 <div class="d-flex flex-wrap align-content-center bg-white">
                     <div class="col-md-auto ml-5">
                         <h3 class="footer-h3">
-                            About<span style={{ color: "#FFCC48" }}>LocalShop</span>
+                            About<span style={{ color: "#FFCC48" }}>GoByExample</span>
                         </h3>
 
-                        <p class="font-weight-bold text-black">
+                        {/* <p class="font-weight-bold text-black">
                             <a class="font-weight-bold text-black" href="/">Home</a>
                             |
                             <a class="font-weight-bold text-black" href="/blog/about.html">About</a>
@@ -29,10 +19,10 @@ const Footer2 = (props) => {
                             <a class="font-weight-bold text-black" href="/blog/contact.html">Contact</a>
                             |
                             <a class="font-weight-bold text-black" href="/blog/techblogs.html">Blog</a>
-                        </p>
+                        </p> */}
                         <p class="font-weight-normal text-black">© 2018-
                             {year.getFullYear()}
-                            Local Shop.
+                             @Rupak Kumar.
                         </p>
                     </div>
                     <div class="col-md-auto ml-5">
@@ -46,19 +36,19 @@ const Footer2 = (props) => {
 
                         <p class="font-weight-bold text-black">
                             <i class="fa fa-2x fa-envelope"></i><span> <a
-                                href="mailto:admin@vlocalshop.in">admin@vlocalshop.in</a></span>
+                                href="mailto:admin@vlocalshop.in">rupak.kumar.ambasta@gmail.com</a></span>
                         </p>
 
                     </div>
                     <div class="col">
                         <p>
-                            <span class="font-weight-bold text-black">About the company</span><br />
+                            <span class="font-weight-bold text-black">About Me</span><br />
                             <p class="font-weight-normal text-black">
-                                Started in 2018, we are commited to delivery within few hours of customer making an order in
-                            our platform. Follow us on.</p>
+                            A creative technologist, thought leader and problem solver with 20+ years of experience as development 
+manager, team manager, architect and developer in various application and infrastructure domains.</p>
                         </p>
                         <div>
-                            <a href="https://www.facebook.com/vlocal.s/" target="_blank" rel="noopener noreferrer">
+                            {/* <a href="https://www.facebook.com/vlocal.s/" target="_blank" rel="noopener noreferrer">
                                 <span style={{ color: socialMediaColors.facebook }}>
                                     <i class="fab fa-3x fa-facebook-square"></i>&nbsp;&nbsp;
                                 </span>
@@ -92,7 +82,7 @@ const Footer2 = (props) => {
                                 <span style={{ color: socialMediaColors.whatsapp }}>
                                     <i class="fab fa-3x fa-whatsapp-square"></i>&nbsp;&nbsp;
                                 </span>
-                            </a>
+                            </a> */}
                         </div>
                     </div>
                 </div>

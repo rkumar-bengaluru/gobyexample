@@ -29,7 +29,7 @@ export default function ScrollToTop() {
         <div className="scroll-to-top">
             {isVisible &&
                 <div onClick={scrollToTop}>
-                    <img src='/icons/top.svg' alt='Go to top' />
+                    <img src='/gobyexample/icons/top.svg' alt='Go to top' />
                 </div>}
         </div>
     );

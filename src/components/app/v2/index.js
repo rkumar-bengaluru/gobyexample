@@ -1,12 +1,16 @@
 import React from 'react';
-import Products from './products'
 
 
 const App2 = props => {
 
     return (
         <div class="row justify-content-around border-bottom">
-            <Products productListUrl={process.env.REACT_APP_catalogListUrl} productListSearchUrl={process.env.REACT_APP_catalogListHasMore} />
+           <div class="row">
+               <div className='col'>
+                    <a className='footer-h3' href='/gobyexample/logger'>Custom Logger for Go</a>
+               </div>
+               
+            </div>
         </div>
     );
 }
