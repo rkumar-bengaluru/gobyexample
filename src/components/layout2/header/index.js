@@ -22,9 +22,16 @@ const Header2 = (props) => {
                 </div>
                 <div className="col-md-auto"><h2 class="text-white"><span class="footer-h3 text-white" >Learn Go By Example</span></h2></div>
                 <div className="col-md-auto">
-                    {/* <a href="/blog/marketplace.html" target="_blank">
-                        <img src='/gobyexample/icons/mp.svg' alt="LocalShop"></img>
-                    </a> */}
+                    {
+                        <>
+                        <a className="nav-link ml-2 mr-2 text-white"
+                                        href="/gobyexample"
+                                        rel="noopener noreferrer">Home
+                                        <span className="sr-only">(current)</span>
+                                    </a>
+                        
+                        </>
+                    }
                 </div>
             </div>
             
