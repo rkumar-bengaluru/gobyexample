@@ -5,6 +5,11 @@ import RestInGo from '../rest';
 
 const App = () => {
     const Home = <div class="row">
+                    <p>
+                        Go By Example is set of small projects which will help beginner or
+                        and experienced professional programmer to try and make their hands
+                        dirty with real time projects. 
+                    </p>
                     <div className='col-4'>
                         <a 
                          className='footer-h3' 
@@ -43,7 +48,6 @@ const App = () => {
     return (
         
         <div class="container">
-
             {state.current}
         </div>
     );
