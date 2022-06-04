@@ -92,7 +92,7 @@ func TestMain(m *testing.M) {
                             }} />
                 </div>
                 <div className="col-6 border">
-                Step 02 - Write the test for GetProduct
+                Step 04 - Run the routes test.
                         <Editor
                             value="go test -v github.com/rkumar-bengaluru/go/rest/routes"
                             onValueChange={app => setApp(app)}
