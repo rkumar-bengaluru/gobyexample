@@ -13,6 +13,7 @@
     "focus-trap-react": "^8.4.1",
     "gh-pages": "^4.0.0",
     "jquery": "^3.6.0",
+    "prismjs": "^1.28.0",
     "react": "^17.0.1",
     "react-autobind": "^1.0.6",
     "react-bootstrap": "^1.5.2",
@@ -22,6 +23,7 @@
     "react-materialize": "^3.9.6",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "react-simple-code-editor": "^0.11.2",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
