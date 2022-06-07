@@ -2,40 +2,53 @@ import React, {useReducer} from 'react';
 
 import GoLogger from '../logger';
 import RestInGo from '../rest';
-import RestGin from '../restgin'
+import RestGin from '../restgin';
+import SearchEngine from '../search';
 const App = () => {
-    const Home = <div class="row">
+    const Home = <div class="container">
                     <p>
                         Go By Example is set of small projects which will help beginner or
                         and experienced professional programmer to try and make their hands
                         dirty with real time projects. 
                     </p>
-                    <div className='col-4'>
-                        <a 
-                         className='footer-h3' 
-                         href="javascript:void(0)"
-                         
-                            onClick={() => dispatch({ type: '0' })}>
-                            Custom Logger for Go
-                        </a>
+                    <div className='row'>
+                        <div className='col-4'>
+                            <a 
+                            className='footer-h3' 
+                            href="javascript:void(0)"
+                                onClick={() => dispatch({ type: '3' })}>
+                                Let's write a Search Engine...
+                            </a>
+                        </div>
                     </div>
-                    <div className='col-4'>
-                        <a 
-                         className='footer-h3' 
-                         href="javascript:void(0)"
-                         
-                            onClick={() => dispatch({ type: '1' })}>
-                            Rest API with Gorilla
-                        </a>
-                    </div>
-                    <div className='col-4'>
-                        <a 
-                         className='footer-h3' 
-                         href="javascript:void(0)"
-                         
-                            onClick={() => dispatch({ type: '2' })}>
-                            Rest API with Gin
-                        </a>
+                    <div className='row'>
+                        <div className='col-4'>
+                            <a 
+                            className='footer-h3' 
+                            href="javascript:void(0)"
+                            
+                                onClick={() => dispatch({ type: '2' })}>
+                                Rest API with Gin
+                            </a>
+                        </div>
+                        <div className='col-4'>
+                            <a 
+                            className='footer-h3' 
+                            href="javascript:void(0)"
+                            
+                                onClick={() => dispatch({ type: '0' })}>
+                                Custom Logger for Go
+                            </a>
+                        </div>
+                        <div className='col-4'>
+                            <a 
+                            className='footer-h3' 
+                            href="javascript:void(0)"
+                            
+                                onClick={() => dispatch({ type: '1' })}>
+                                Rest API with Gorilla
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -52,6 +65,8 @@ const App = () => {
                 return { prev: state.current, current: <RestInGo/> };
             case '2':
                 return { prev: state.current, current: <RestGin/> };
+            case '3':
+                return { prev: state.current, current: <SearchEngine/> };
             default:
                 return { prev: state.current, current: Home };
         }
