@@ -19,7 +19,7 @@ const Home = (props) => {
         finally with multiple replicas of services. Each phase is performance 
         improvement over the previous one.
     </p>
-   
+    <p>Code repository <a href="https://github.com/rkumar-bengaluru/go/tree/main/searchengine" target="_blank">here</a></p>
     <div>
         <h6>Serial Search</h6>
         <p>
