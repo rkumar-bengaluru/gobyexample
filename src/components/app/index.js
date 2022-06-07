@@ -2,7 +2,7 @@ import React, {useReducer} from 'react';
 
 import GoLogger from '../logger';
 import RestInGo from '../rest';
-
+import RestGin from '../restgin'
 const App = () => {
     const Home = <div class="row">
                     <p>
@@ -28,6 +28,15 @@ const App = () => {
                             Rest API with Gorilla
                         </a>
                     </div>
+                    <div className='col-4'>
+                        <a 
+                         className='footer-h3' 
+                         href="javascript:void(0)"
+                         
+                            onClick={() => dispatch({ type: '2' })}>
+                            Rest API with Gin
+                        </a>
+                    </div>
                 </div>
 
     const initial = { current: Home, prev: '' };
@@ -39,8 +48,10 @@ const App = () => {
         switch (action.type) {
             case '0':
                 return { prev: state.current, current: <GoLogger/> };
-                case '1':
-            return { prev: state.current, current: <RestInGo/> };
+            case '1':
+                return { prev: state.current, current: <RestInGo/> };
+            case '2':
+                return { prev: state.current, current: <RestGin/> };
             default:
                 return { prev: state.current, current: Home };
         }
