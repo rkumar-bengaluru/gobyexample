@@ -4,6 +4,8 @@ import GoLogger from '../logger';
 import RestInGo from '../rest';
 import RestGin from '../restgin';
 import SearchEngine from '../search';
+import Palindrome from '../algorithms/palindrome';
+import RemainderSorting from '../algorithms/remsort/remsort';
 const App = () => {
     const Home = <div class="container">
                     <p>
@@ -50,6 +52,27 @@ const App = () => {
                             </a>
                         </div>
                     </div>
+                   { /** algorithms... */}
+                    <div className='row'>
+                        <div className='col-4'>
+                            <a 
+                            className='footer-h3' 
+                            href="javascript:void(0)"
+                            
+                                onClick={() => dispatch({ type: '4' })}>
+                                Palindrome
+                            </a>
+                        </div>
+                        <div className='col-4'>
+                            <a 
+                            className='footer-h3' 
+                            href="javascript:void(0)"
+                            
+                                onClick={() => dispatch({ type: '5' })}>
+                                Remainder Sorting
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
     const initial = { current: Home, prev: '' };
@@ -67,6 +90,10 @@ const App = () => {
                 return { prev: state.current, current: <RestGin/> };
             case '3':
                 return { prev: state.current, current: <SearchEngine/> };
+            case '4':
+                return { prev: state.current, current: <Palindrome/> };
+            case '5':
+                return { prev: state.current, current: <RemainderSorting/> };
             default:
                 return { prev: state.current, current: Home };
         }
