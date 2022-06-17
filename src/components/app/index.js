@@ -6,6 +6,7 @@ import RestGin from '../restgin';
 import SearchEngine from '../search';
 import Palindrome from '../algorithms/palindrome';
 import RemainderSorting from '../algorithms/remsort/remsort';
+import Channel from '../channel';
 const App = () => {
     const Home = <div class="container">
                     <p>
@@ -20,6 +21,14 @@ const App = () => {
                             href="javascript:void(0)"
                                 onClick={() => dispatch({ type: '3' })}>
                                 Let's write a Search Engine...
+                            </a>
+                        </div>
+                        <div className='col-4'>
+                            <a 
+                            className='footer-h3' 
+                            href="javascript:void(0)"
+                                onClick={() => dispatch({ type: '6' })}>
+                                Go Routine &#38; Channel
                             </a>
                         </div>
                     </div>
@@ -94,6 +103,8 @@ const App = () => {
                 return { prev: state.current, current: <Palindrome/> };
             case '5':
                 return { prev: state.current, current: <RemainderSorting/> };
+            case '6':
+                return { prev: state.current, current: <Channel/> };
             default:
                 return { prev: state.current, current: Home };
         }
